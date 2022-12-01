@@ -27,7 +27,7 @@ fn main() -> Result<(), Error> {
                 }
             }
         }
-        println!("{:?}", result.iter().fold(0u32, |a, &b| Ord::max(a, b)));
+        println!("{:?}", result.iter().max().unwrap());
         Ok(())
     } else {
         Err(Error::MissingArgument)
